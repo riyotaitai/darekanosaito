@@ -35,7 +35,7 @@ function Origin() {
         {/* ── 祖母（父方） ── */}
         <rect x="220" y="40" width="120" height="44" rx="8" fill="#1D9E75" opacity="0.6" />
         <text x="280" y="62" textAnchor="middle" dominantBaseline="central" fontSize="13" fontWeight="500" fill="#084031">
-          祖母（父方）
+          キミコ
         </text>
 
         {/* ── 祖父（母方） ── */}
@@ -49,7 +49,7 @@ function Origin() {
         <rect x="510" y="40" width="120" height="56" rx="8" fill="#D85A30" opacity="0.6" />
         <text x="570" textAnchor="middle" fontSize="11" fontWeight="500" fill="#4A1B0C">
           <tspan x="570" y="58">"歩く生活の知恵袋"</tspan>
-          <tspan x="570" dy="16">キミコ</tspan>
+          <tspan x="570" dy="16">チエコ</tspan>
         </text>
 
         {/* ── 祖父母間の結婚線 ── */}
@@ -67,15 +67,17 @@ function Origin() {
         <line x1="460" y1="110" x2="460" y2="160" stroke="#aaa" strokeWidth="1" strokeDasharray="4 3" />
 
         {/* ── 父 ── */}
-        <rect x="120" y="160" width="120" height="44" rx="8" fill="#1D9E75" opacity="0.6" />
-        <text x="180" y="182" textAnchor="middle" dominantBaseline="central" fontSize="14" fontWeight="500" fill="#084031">
-          父
+        <rect x="120" y="160" width="120" height="56" rx="8" fill="#1D9E75" opacity="0.6" />
+        <text x="180" textAnchor="middle" fontSize="9" fontWeight="500" fill="#084031">
+          <tspan x="180" y="178">"笑いのエースストライカー"</tspan>
+          <tspan x="180" dy="16">ダビットソン</tspan>
         </text>
 
         {/* ── 母 ── */}
-        <rect x="400" y="160" width="120" height="44" rx="8" fill="#D85A30" opacity="0.6" />
-        <text x="460" y="182" textAnchor="middle" dominantBaseline="central" fontSize="14" fontWeight="500" fill="#4A1B0C">
-          母
+        <rect x="400" y="160" width="120" height="56" rx="8" fill="#D85A30" opacity="0.6" />
+        <text x="460" textAnchor="middle" fontSize="11" fontWeight="500" fill="#4A1B0C">
+          <tspan x="460" y="178">"神託の天気予報士"</tspan>
+          <tspan x="460" dy="16">ユキコ</tspan>
         </text>
 
         {/* ── 父母間の結婚線 ── */}
