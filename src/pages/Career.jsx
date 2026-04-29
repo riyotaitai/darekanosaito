@@ -1,9 +1,23 @@
 function Career() {
   return (
-    <section className="page">
+    <section className="page" style={{ color: "black" }}>
       <h1>経歴</h1>
+      <br></br>(0~5歳)
+      <br></br>・都市部の一般家庭に誕生 <br></br>
+      ・幼少期から異常に物覚えが良い<br></br> (6~12歳)<br></br>
+      ・テストは常に満点をとる <br></br>・多種多様な習い事を励む日々を過ごす
+      (13~18歳)
+      <br></br>
+      ・中学,高校ともに生徒長を務める。しかし、生徒を駒のように扱い、一人浮いた存在になる
+      <br></br>(19~22歳)<br></br>
+      ・東大に入学するも、大学の授業には全く出ず、ひたすらプログラミングをする日々を送る
+      <br></br>
+      (23~30歳)<br></br>
+      ・効率を優先するあまり現場の負担や人間関係を軽視し、現場崩壊と失敗を招く
+      <br></br>(31~)<br></br>
+      ・エリート街道から外れ、フリーターとして日銭を稼ぐ生活に
     </section>
-  )
+  );
 }
 
-export default Career
+export default Career;
