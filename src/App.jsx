@@ -1,121 +1,80 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import heroImg from './assets/hero.png'
+import { BrowserRouter, Routes, Route, NavLink } from 'react-router-dom'
+import Hobbies from './pages/Hobbies'
+import Origin from './pages/Origin'
+import Career from './pages/Career'
+import PersonProfile from './pages/PersonProfile'
+import Personality from './pages/Personality'
 import './App.css'
 
-function App() {
-  const [count, setCount] = useState(0)
+function Home() {
+  return (
+    <section id="home">
+      <div className="avatar">
+        <div className="avatar-circle">👤</div>
+      </div>
+      <h1>だれかの名前</h1>
+      <p className="tagline">ここに一言キャッチコピーを入れます</p>
+      <div className="home-links">
+        <NavLink to="/hobbies" className="home-card">
+          <span className="home-card-icon">🎮</span>
+          <span>趣味</span>
+        </NavLink>
+        <NavLink to="/origin" className="home-card">
+          <span className="home-card-icon">🏠</span>
+          <span>出身</span>
+        </NavLink>
+        <NavLink to="/career" className="home-card">
+          <span className="home-card-icon">💼</span>
+          <span>経歴</span>
+        </NavLink>
+        <NavLink to="/person-profile" className="home-card">
+          <span className="home-card-icon">🙋</span>
+          <span>人物像</span>
+        </NavLink>
+        <NavLink to="/personality" className="home-card">
+          <span className="home-card-icon">✨</span>
+          <span>性格</span>
+        </NavLink>
+      </div>
+    </section>
+  )
+}
 
+function Layout() {
   return (
     <>
-      <section id="center">
-        <div className="hero">
-          <img src={heroImg} className="base" width="170" height="179" alt="" />
-          <img src={reactLogo} className="framework" alt="React logo" />
-          <img src={viteLogo} className="vite" alt="Vite logo" />
-        </div>
-        <div>
-          <h1>Get started</h1>
-          <p>
-            Edit <code>src/App.jsx</code> and save to test <code>HMR</code>
-          </p>
-        </div>
-        <button
-          type="button"
-          className="counter"
-          onClick={() => setCount((count) => count + 1)}
-        >
-          Count is {count}
-        </button>
-      </section>
-
-      <div className="ticks"></div>
-
-      <section id="next-steps">
-        <div id="docs">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#documentation-icon"></use>
-          </svg>
-          <h2>Documentation</h2>
-          <p>Your questions, answered</p>
-          <ul>
-            <li>
-              <a href="https://vite.dev/" target="_blank">
-                <img className="logo" src={viteLogo} alt="" />
-                Explore Vite
-              </a>
-            </li>
-            <li>
-              <a href="https://react.dev/" target="_blank">
-                <img className="button-icon" src={reactLogo} alt="" />
-                Learn more
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div id="social">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#social-icon"></use>
-          </svg>
-          <h2>Connect with us</h2>
-          <p>Join the Vite community</p>
-          <ul>
-            <li>
-              <a href="https://github.com/vitejs/vite" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#github-icon"></use>
-                </svg>
-                GitHub
-              </a>
-            </li>
-            <li>
-              <a href="https://chat.vite.dev/" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#discord-icon"></use>
-                </svg>
-                Discord
-              </a>
-            </li>
-            <li>
-              <a href="https://x.com/vite_js" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#x-icon"></use>
-                </svg>
-                X.com
-              </a>
-            </li>
-            <li>
-              <a href="https://bsky.app/profile/vite.dev" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#bluesky-icon"></use>
-                </svg>
-                Bluesky
-              </a>
-            </li>
-          </ul>
-        </div>
-      </section>
-
-      <div className="ticks"></div>
-      <section id="spacer"></section>
+      <header id="site-header">
+        <NavLink to="/" className="site-title">だれかのサイト</NavLink>
+        <nav>
+          <NavLink to="/hobbies">趣味</NavLink>
+          <NavLink to="/origin">出身</NavLink>
+          <NavLink to="/career">経歴</NavLink>
+          <NavLink to="/person-profile">人物像</NavLink>
+          <NavLink to="/personality">性格</NavLink>
+        </nav>
+      </header>
+      <main id="main-content">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/hobbies" element={<Hobbies />} />
+          <Route path="/origin" element={<Origin />} />
+          <Route path="/career" element={<Career />} />
+          <Route path="/person-profile" element={<PersonProfile />} />
+          <Route path="/personality" element={<Personality />} />
+        </Routes>
+      </main>
+      <footer id="site-footer">
+        <p>© 2024 だれかの名前</p>
+      </footer>
     </>
+  )
+}
+
+function App() {
+  return (
+    <BrowserRouter>
+      <Layout />
+    </BrowserRouter>
   )
 }
 
