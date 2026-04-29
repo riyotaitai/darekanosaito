@@ -12,8 +12,8 @@ function Home() {
       <div className="avatar">
         <div className="avatar-circle">👤</div>
       </div>
-      <h1>だれかの名前</h1>
-      <p className="tagline">ここに一言キャッチコピーを入れます</p>
+      <h1>真理 終（まり おわり）</h1>
+      <p className="tagline">人間を『変数』と呼んだ、元・天才の成れの果て</p>
       <div className="home-links">
         <NavLink to="/hobbies" className="home-card">
           <span className="home-card-icon">🎮</span>
